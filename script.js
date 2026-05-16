@@ -82,9 +82,7 @@ const WALK_UP_SONGS = [
 
 const SOUND_EFFECTS = [{ name: "name", file: "file.mp3" }];
 
-const UNCLAIMED_SONGS = [
-  { name: "AC/DC - Back in Black", file: "back_in_black.mp3" },
-];
+const UNCLAIMED_SONGS = [{ name: "Artist - Song", file: "file.mp3" }];
 
 const ARCHIVE_SONGS = [
   {
@@ -162,7 +160,7 @@ function selectSong(file, title, tracksLastPlayed) {
   currentFile = file;
   currentTitle = title;
 
-  audio.src = "/mp3s/" + encodeURIComponent(file);
+  audio.src = "./sfx/" + encodeURIComponent(file);
   playerTitle.textContent = title;
 
   document
@@ -245,7 +243,7 @@ function renderWalkUpList() {
 
   for (const song of songs) {
     list.appendChild(
-      makeItem(song.file, `🥎 ${song.player}: ${song.label}`, true, true),
+      makeItem(song.file, `⚾ ${song.player}: ${song.label}`, true, true),
     );
   }
 }
