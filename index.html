@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Softball Walk-Up Songs</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sortablejs@1.15.0/Sortable.min.js"></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <div class="player-bar">
+      <audio id="audio-player"></audio>
+      <div id="player-title">Select a player</div>
+      <div id="last-played-label"></div>
+      <div class="player-controls">
+        <button class="jp-play" id="btn-play">▶ Play</button>
+        <button class="jp-stop" id="btn-stop">■ Stop</button>
+      </div>
+      <div class="progress-bar"><div id="player-progress"></div></div>
+    </div>
+
+    <div class="tabs">
+      <button class="tab-btn active" data-tab="walkup">⚾ Walk-Up Songs</button>
+      <button class="tab-btn" data-tab="sfx">🔊 Sound Effects</button>
+    </div>
+
+    <div class="content">
+      <div id="tab-walkup" class="tab-content active">
+        <ul id="walkup-list" class="song-list"></ul>
+        <details open>
+          <summary>Unclaimed Songs</summary>
+          <ul id="unclaimed-list" class="song-list"></ul>
+        </details>
+        <details>
+          <summary>Archive</summary>
+          <ul id="archive-list" class="song-list"></ul>
+          <ul class="link-list">
+            <li data-file="life-is-good.mp3">
+              <a href="#" class="selectme">Teagan Y: Future - Life is Good</a>
+            </li>
+          </ul>
+        </details>
+      </div>
+
+      <div id="tab-sfx" class="tab-content">
+        <ul id="sfx-list" class="song-list"></ul>
+      </div>
+    </div>
+  </body>
+</html>
