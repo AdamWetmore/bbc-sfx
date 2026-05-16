@@ -10,7 +10,7 @@ const WALK_UP_SONGS = [
   {
     player: "Carver H",
     label: "Gente De Zona - Hablame de Miami",
-    file: "jump_around.mp3",
+    file: "hablame-de-miami.mp3",
   },
   {
     player: "Ben M",
