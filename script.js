@@ -82,7 +82,39 @@ const WALK_UP_SONGS = [
 
 const SOUND_EFFECTS = [{ name: "name", file: "file.mp3" }];
 
-const UNCLAIMED_SONGS = [{ name: "Artist - Song", file: "file.mp3" }];
+const UNCLAIMED_SONGS = [
+  { name: "Justin Beiber - Beauty And A Beat", file: "beauty-and-a-beat.mp3" },
+  { name: "The Weeknd - Blinding Lights", file: "blinding-lights.mp3" },
+  { name: "Katy Perry - California Gurls", file: "california-gurls.mp3" },
+  { name: "MC Hammer - Cant Touch This", file: "cant-touch-this.mp3" },
+  { name: "LazyTown - Cooking By The Book", file: "cooking-by-the-book.mp3" },
+  { name: "Popp Hunna - Corvette Corvette", file: "corvette-corvette.mp3" },
+  { name: "N64 - Dk Rap", file: "dk-rap.mp3" },
+  { name: "Chris Brown - Five More Hours", file: "five-more-hours.mp3" },
+  { name: "Flo Rida - GDFR", file: "gdfr.mp3" },
+  { name: "Gergie Among Us Sus", file: "gergie-among-us-sus.mp3" },
+  { name: "Olivia Rodrigo - Good 4 U", file: "good-4-u.mp3" },
+  { name: "Harlem Shake", file: "harlem-shake.mp3" },
+  { name: "Oukast - Hey Ya", file: "hey-ya.mp3" },
+  { name: "KYLE - I Spy", file: "i-spy.mp3" },
+  { name: "Dua Lipa - Levitating", file: "levitating.mp3" },
+  { name: "Flo Rida - Low", file: "low.mp3" },
+  { name: "T-Wayne - Nasty Freestyle", file: "nasty-freestyle.mp3" },
+  { name: "Wocka Flocka Flame - No Hands", file: "no-hands.mp3" },
+  { name: "Lil Nas X - Old Town Road", file: "old-town-road.mp3" },
+  { name: "Travis Scott - Out West", file: "out-west.mp3" },
+  { name: "Soulja Boy - Pretty Boy Swag", file: "pretty-boy-swag.mp3" },
+  { name: "Jess Glynne - Rather Be", file: "rather-be.mp3" },
+  { name: "Katy Perry - Roar", file: "roar.mp3" },
+  { name: "The Chainsmokers - Selfie", file: "selfie.mp3" },
+  { name: "Justin Timberlake - Sexyback", file: "sexyback.mp3" },
+  { name: "Becky G - Shower", file: "shower.mp3" },
+  { name: "Pitbull - Time Of Our Lives 1", file: "time-of-our-lives-1.mp3" },
+  { name: "Pitbull - Time Of Our Lives 2", file: "time-of-our-lives-2.mp3" },
+  { name: "Migos - Walk It Talk It", file: "walk-it-talk-it.mp3" },
+  { name: "Jason Derulo - Whatcha Say", file: "whatcha-say.mp3" },
+  { name: "Lil Jon - Yeah", file: "yeah.mp3" },
+];
 
 const ARCHIVE_SONGS = [
   {
@@ -160,7 +192,7 @@ function selectSong(file, title, tracksLastPlayed) {
   currentFile = file;
   currentTitle = title;
 
-  audio.src = "./sfx/" + encodeURIComponent(file);
+  audio.src = "./sfx/" + file.split("/").map(encodeURIComponent).join("/");
   playerTitle.textContent = title;
 
   document
@@ -291,7 +323,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   const unclaimedList = document.getElementById("unclaimed-list");
   for (const song of UNCLAIMED_SONGS) {
-    unclaimedList.appendChild(makeItem(song.file, song.name, true, false));
+    unclaimedList.appendChild(
+      makeItem(`unclaimed/${song.file}`, song.name, true, false),
+    );
   }
 
   const archiveList = document.getElementById("archive-list");
