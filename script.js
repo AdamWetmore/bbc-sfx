@@ -14,8 +14,8 @@ const WALK_UP_SONGS = [
   },
   {
     player: "Ben M",
-    label: "Counterparts - Bound to the Burn",
-    file: "bound-to-the-burn.mp3",
+    label: "Young Stoner Life & Young Thug - Superstar",
+    file: "superstar.mp3",
   },
   {
     player: "Max E",
@@ -29,8 +29,8 @@ const WALK_UP_SONGS = [
   },
   {
     player: "Sam E",
-    label: "Gucci Mane - Both",
-    file: "both.mp3",
+    label: "Damian Marley - Welcome to Jamrock",
+    file: "welcome-to-jamrock.mp3",
   },
   {
     player: "Adam N",
@@ -69,8 +69,8 @@ const WALK_UP_SONGS = [
   },
   {
     player: "Henry O",
-    label: "WWE - Jacob Fatu Theme",
-    file: "main-event-ish.mp3",
+    label: "WWE - Fatu Samoan Destroyer",
+    file: "fatu-samoan-destroyer.mp3",
   },
   { player: "Peyton R", label: "Shaggy - Boombastic", file: "boombastic.mp3" },
   {
@@ -78,12 +78,19 @@ const WALK_UP_SONGS = [
     label: "WWE - Roman Reigns Theme",
     file: "roman-reigns.mp3",
   },
+  {
+    player: "Josh C",
+    label: "Drake - Ran to Atlanta",
+    file: "ran-to-atlanta.mp3",
+  },
 ];
 
 const SOUND_EFFECTS = [{ name: "name", file: "file.mp3" }];
 
 const UNCLAIMED_SONGS = [
   { name: "Justin Beiber - Beauty And A Beat", file: "beauty-and-a-beat.mp3" },
+  { name: "Counterparts - Bound to the Burn", file: "bound-to-the-burn.mp3" },
+  { name: "Gucci Mane - Both", file: "both.mp3" },
   { name: "The Weeknd - Blinding Lights", file: "blinding-lights.mp3" },
   { name: "Katy Perry - California Gurls", file: "california-gurls.mp3" },
   { name: "MC Hammer - Cant Touch This", file: "cant-touch-this.mp3" },
@@ -114,6 +121,7 @@ const UNCLAIMED_SONGS = [
   { name: "Migos - Walk It Talk It", file: "walk-it-talk-it.mp3" },
   { name: "Jason Derulo - Whatcha Say", file: "whatcha-say.mp3" },
   { name: "Lil Jon - Yeah", file: "yeah.mp3" },
+  { name: "WWE - Jacob Fatu Theme", file: "main-event-ish.mp3" },
 ];
 
 const ARCHIVE_SONGS = [
